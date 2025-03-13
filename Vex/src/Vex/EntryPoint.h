@@ -6,7 +6,12 @@ extern Vex::Application* Vex::CreateApplication();
 
 int main(int argc, char** argv)
 {
-    printf("Vex Engine!");
+    int a = 5;
+
+    Vex::Log::Init();
+    VEX_CORE_WARN("Testing Logging");
+    VEX_INFO("Hello! var={0}", a);
+    
     auto app = Vex::CreateApplication();
     app->Run();
     delete app;
