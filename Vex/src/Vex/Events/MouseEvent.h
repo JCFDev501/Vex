@@ -1,7 +1,6 @@
 #pragma once
 
-#include "Vex/Events/Event.h"
-#include <sstream>
+#include "Event.h"  
 #include "Vex/Input/MouseCodes.h"
 
 namespace Vex {
