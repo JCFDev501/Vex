@@ -7,6 +7,9 @@
     <Filter Include="Vex\Events">
       <UniqueIdentifier>{1CABA410-0863-E65D-716A-BFB95D41814E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vex\Input">
+      <UniqueIdentifier>{37A839D2-A312-EE48-EC50-9FEE58FACB9D}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Vex.h" />
@@ -25,9 +28,22 @@
     <ClInclude Include="src\Vex\Events\Event.h">
       <Filter>Vex\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Vex\Events\KeyEvent.h">
+      <Filter>Vex\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vex\Events\MouseEvent.h">
+      <Filter>Vex\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vex\Input\KeyCodes.h">
+      <Filter>Vex\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vex\Input\MouseCodes.h">
+      <Filter>Vex\Input</Filter>
+    </ClInclude>
     <ClInclude Include="src\Vex\Log.h">
       <Filter>Vex</Filter>
     </ClInclude>
+    <ClInclude Include="src\VexPch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Vex\Application.cpp">
@@ -36,5 +52,6 @@
     <ClCompile Include="src\Vex\Log.cpp">
       <Filter>Vex</Filter>
     </ClCompile>
+    <ClCompile Include="src\VexPch.cpp" />
   </ItemGroup>
 </Project>
