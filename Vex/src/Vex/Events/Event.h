@@ -1,8 +1,5 @@
 #pragma once
-
 #include "Vex/Core.h"
-#include <string>
-#include <functional>
 
 namespace Vex
 {

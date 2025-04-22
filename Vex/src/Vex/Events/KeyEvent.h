@@ -1,10 +1,7 @@
 ﻿#pragma once
 
-#include <sstream>
-#include "Vex/Events/Event.h"
+#include "Event.h"
 #include "Vex/Input/KeyCodes.h"
-
-// TODO: Implement KeyCodes
 
 namespace Vex {
 

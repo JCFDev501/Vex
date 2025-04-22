@@ -10,6 +10,7 @@
  * The log format is set to include a timestamp, logger name, and message, with color formatting.
  */
 
+#include "VexPch.h"
 #include "Log.h"
 #include "spdlog/sinks/stdout_color_sinks.h" // Provides colored console output
 

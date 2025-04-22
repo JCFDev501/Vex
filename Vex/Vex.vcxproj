@@ -76,7 +76,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>VexPch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>VEX_PLATFORM_WINDOWS;VEX_BUILD_DLL;VEX_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -98,7 +99,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>VexPch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>VEX_PLATFORM_WINDOWS;VEX_BUILD_DLL;VEX_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -124,7 +126,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>VexPch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>VEX_PLATFORM_WINDOWS;VEX_BUILD_DLL;VEX_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -150,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Vex.h" />
+    <ClInclude Include="src\VexPch.h" />
     <ClInclude Include="src\Vex\Application.h" />
     <ClInclude Include="src\Vex\Core.h" />
     <ClInclude Include="src\Vex\EntryPoint.h" />
@@ -157,15 +161,18 @@
     <ClInclude Include="src\Vex\Events\Event.h" />
     <ClInclude Include="src\Vex\Events\KeyEvent.h" />
     <ClInclude Include="src\Vex\Events\MouseEvent.h" />
+    <ClInclude Include="src\Vex\Input\KeyCodes.h" />
     <ClInclude Include="src\Vex\Input\MouseCodes.h" />
     <ClInclude Include="src\Vex\Log.h" />
+    <ClInclude Include="src\VexPch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\VexPch.cpp" />
     <ClCompile Include="src\Vex\Application.cpp" />
     <ClCompile Include="src\Vex\Log.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="src\Vex\Input\KeyCodes.h" />
+    <ClCompile Include="src\VexPch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,6 @@
 ﻿#pragma once
 
-#include <sstream>
-#include "Vex/Events/Event.h"
+#include "Event.h"
 
 namespace Vex
 {
