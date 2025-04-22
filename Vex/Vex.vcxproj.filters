@@ -4,6 +4,9 @@
     <Filter Include="Vex">
       <UniqueIdentifier>{382E880B-A437-887C-2DB3-9E7C99BB937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vex\Events">
+      <UniqueIdentifier>{1CABA410-0863-E65D-716A-BFB95D41814E}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Vex.h" />
@@ -15,6 +18,12 @@
     </ClInclude>
     <ClInclude Include="src\Vex\EntryPoint.h">
       <Filter>Vex</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vex\Events\ApplicationEvent.h">
+      <Filter>Vex\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vex\Events\Event.h">
+      <Filter>Vex\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Vex\Log.h">
       <Filter>Vex</Filter>
