@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>VEX_PLATFORM_WINDOWS;VEX_BUILD_DLL;VEX_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -101,7 +101,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>VEX_PLATFORM_WINDOWS;VEX_BUILD_DLL;VEX_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -127,7 +127,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>VEX_PLATFORM_WINDOWS;VEX_BUILD_DLL;VEX_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -153,11 +153,19 @@
     <ClInclude Include="src\Vex\Application.h" />
     <ClInclude Include="src\Vex\Core.h" />
     <ClInclude Include="src\Vex\EntryPoint.h" />
+    <ClInclude Include="src\Vex\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Vex\Events\Event.h" />
+    <ClInclude Include="src\Vex\Events\KeyEvent.h" />
+    <ClInclude Include="src\Vex\Events\MouseEvent.h" />
+    <ClInclude Include="src\Vex\Input\MouseCodes.h" />
     <ClInclude Include="src\Vex\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Vex\Application.cpp" />
     <ClCompile Include="src\Vex\Log.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\Vex\Input\KeyCodes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
