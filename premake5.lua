@@ -18,7 +18,13 @@ pchsource "Vex/src/VexPch.cpp"
 
 files {"%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp"}
 
-includedirs {"%{prj.name}/src", "%{prj.name}/vendor/spdlog/include"}
+includedirs {"%{prj.name}/src", "%{prj.name}/vendor/spdlog/include", "%{prj.name}/vendor/thirdparty/SDL2-2.30.5/include"}
+
+includedirs {"%{prj.name}/src", "%{prj.name}/vendor/spdlog/include", "%{prj.name}/vendor/thirdparty/SDL2-2.30.5/include"}
+
+libdirs {"Vex/vendor/thirdparty/SDL2-2.30.5/lib/x64"}
+
+links {"SDL2"}
 
 filter "system:windows"
 cppdialect "C++20"
@@ -54,7 +60,7 @@ objdir("bin-int/" .. outputdir .. "/%{prj.name}")
 
 files {"%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp"}
 
-includedirs {"Vex/vendor/spdlog/include", "Vex/src"}
+includedirs {"Vex/vendor/spdlog/include", "Vex/vendor/thirdparty/SDL2-2.30.5/include", "Vex/src"}
 
 links {"Vex"}
 
